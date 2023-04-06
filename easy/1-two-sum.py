@@ -5,3 +5,6 @@ class Solution:
                           # every previous element is going to stored in this map
         for i, n in enumerate(nums):
             diff = target - n
+            if diff in previous_map:
+                return [previous_map[diff], i]
+            previous_map[n] = i 
